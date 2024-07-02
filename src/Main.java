@@ -2,14 +2,95 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        int money = 0;
+        int month = 0;
+        while (money < 2459000) {
+            money = money + 15000;
+            month++;
         }
+        System.out.println(month);
+
+        //2 задание
+
+        int i = 0;
+        while (i < 10) {
+            i++;
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        int g = 10;
+        for (; g > 0; g--) {
+            System.out.print(g + " ");
+        }
+
+        //3 задание
+
+        System.out.println();
+
+        int y = 12000000;
+        int birthrate = (y / 1000) * 17;
+        int death = (y / 1000) * 8;
+        int year = 0;
+        while (year < 10) {
+            y = y + birthrate - death;
+            year++;
+            System.out.println("Год " + year + ", численность населения составляет " + y);
+        }
+
+        //4 задание
+
+        double sum = 15000;
+        int month2 = 0;
+        while (sum < 12000000) {
+            sum = sum + sum * 0.07;
+            month2++;
+            System.out.printf("Месяц %d, сумма накоплений равна - %,.2f%n ", month2, sum);
+        }
+
+        //5 задание
+
+        double sum1 = 15000;
+        int month3 = 0;
+        while (sum1 < 12000000) {
+            sum1 = sum1 + sum1 * 0.07;
+            month3++;
+            if (month3 == 6 || month3 == 12 || month3 == 18 || month3 == 24) {
+                System.out.printf("Месяц %d, сумма накоплений равна - %,.2f%n ", month3, sum1);
+            }
+        }
+
+        //6 задание
+
+        double sum2 = 15000;
+        int month4 = 0;
+        while (month4 < 108) {
+            sum2 = sum2 + sum2 * 0.07;
+            month4++;
+            if (month4 % 6 ==0 ) {
+                System.out.printf("Месяц %d, сумма накоплений равна - %,.2f%n ", month4, sum2);
+            }
+        }
+
+        //7 задание
+
+        int friday = 5;
+        int day = 31;
+        while (friday < day) {
+            System.out.println("Сегодня пятница, " + friday + " число. Необходимо подготовить отчет.");
+            friday = friday + 7;
+        }
+
+        //8 задание
+
+        int comet = 2024;
+        int nullYear = 0;
+        int cometBefore = comet - 200;
+        int cometAfter = comet + 100;
+        for (; nullYear < cometAfter; nullYear = nullYear + 79) {
+            if (cometBefore < nullYear && nullYear < cometAfter) {
+                System.out.println(nullYear);
+            }
+        }
+
     }
 }
