@@ -5,7 +5,7 @@ public class Main {
         int money = 0;
         int month = 0;
         while (money < 2459000) {
-            money = money + 15000;
+            money += 15000;
             month++;
         }
         System.out.println(month);
@@ -27,14 +27,14 @@ public class Main {
 
         System.out.println();
 
-        int y = 12000000;
-        int birthrate = (y / 1000) * 17;
-        int death = (y / 1000) * 8;
+        int country = 12000000;
         int year = 0;
         while (year < 10) {
-            y = y + birthrate - death;
+            int birthrate = (country / 1000) * 17;
+            int death = (country / 1000) * 8;
+            country = country + birthrate - death;
             year++;
-            System.out.println("Год " + year + ", численность населения составляет " + y);
+            System.out.println("Год " + year + ", численность населения составляет " + country);
         }
 
         //4 задание
@@ -51,10 +51,10 @@ public class Main {
 
         double sum1 = 15000;
         int month3 = 0;
-        while (sum1 < 12000000) {
+        while (month3 <= 24) {
             sum1 = sum1 + sum1 * 0.07;
             month3++;
-            if (month3 == 6 || month3 == 12 || month3 == 18 || month3 == 24) {
+            if (month3 % 6 == 0 ) {
                 System.out.printf("Месяц %d, сумма накоплений равна - %,.2f%n ", month3, sum1);
             }
         }
@@ -66,7 +66,7 @@ public class Main {
         while (month4 < 108) {
             sum2 = sum2 + sum2 * 0.07;
             month4++;
-            if (month4 % 6 ==0 ) {
+            if (month4 % 6 == 0 ) {
                 System.out.printf("Месяц %d, сумма накоплений равна - %,.2f%n ", month4, sum2);
             }
         }
@@ -87,7 +87,7 @@ public class Main {
         int cometBefore = comet - 200;
         int cometAfter = comet + 100;
         for (; nullYear < cometAfter; nullYear = nullYear + 79) {
-            if (cometBefore < nullYear && nullYear < cometAfter) {
+            if (cometBefore < nullYear) {
                 System.out.println(nullYear);
             }
         }
